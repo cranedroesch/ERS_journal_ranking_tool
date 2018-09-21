@@ -1,0 +1,35 @@
+,journal,oldtier,ERS,repec_impact,repec_h,sjr,sh,tr_impact,tr_ef,econ_flag,note
+165,agbioforum,Tier III,TRUE,NA,NA,0.214,35,NA,NA,1,Correct
+115,agricultural systems,Tier I,TRUE,1.262,12,0.965,82,2.571,0.00554,NA,Correct
+27,applied energy,Tier II,TRUE,2.585,39,3.058,125,7.182,0.08843,NA,Correct
+62,choices,Tier III,TRUE,0.959,8,NA,NA,NA,NA,NA,Correct
+168,communities and banking,Tier III,TRUE,0.047,2,NA,NA,NA,NA,NA,Described as a magazine and not a journal and now discontinued and replaced with a blog
+57,economic development quarterly,Tier III,TRUE,0.966,7,0.628,36,0.673,0.00065,1,Correct
+224,economic review of the federal reserve bank of kansas city,NA,TRUE,NA,NA,NA,NA,NA,NA,1,Does seem to be ECON
+225,european journal of operations research,NA,TRUE,NA,NA,2.437,NA,NA,NA,NA,"Journal's website cits an SJR number, but not sure if the rest of the cited impact factors are consistent with what we have collected."
+226,evolutionary and institutional economics review,NA,TRUE,NA,NA,NA,NA,NA,NA,1,Should this be econ?
+73,food economics,Tier III,TRUE,NA,NA,NA,NA,NA,NA,NA,Correct
+86,forum for health economics and policy,Tier III,TRUE,1.219,5,0.14,2,NA,NA,1,Correct
+230,"international environmental agreements: politics, law and economics",NA,TRUE,0.652,6,0.762,26,NA,NA,1,"Also listed in REPEC, but with cut off title"
+70,international food and agribusiness management review,Tier III,FALSE,NA,NA,NA,NA,NA,NA,NA,Correct
+75,international journal of trade and global markets,Tier III,TRUE,0.195,3,0.203,3,NA,NA,1,Correct
+189,international real estate review,Tier III,TRUE,0.531,4,NA,NA,NA,NA,NA,Correct
+66,journal of agribusiness in developing and emerging economies,Tier III,TRUE,0.535,4,NA,NA,NA,NA,NA,Correct
+26,journal of agricultural economics,Tier II,TRUE,4.406,16,1.196,46,1.795,0.00183,1,Correct
+172,"journal of agriculture, food systems, and community development",Tier III,TRUE,NA,NA,NA,NA,NA,NA,NA,Correct
+49,journal of applied economics,Tier II,TRUE,2.871,9,0.291,14,0.455,0.00034,1,Correct
+78,journal of asian economics,Tier III,TRUE,3.779,16,0.508,35,NA,NA,1,Correct
+87,journal of choice modelling,Tier III,TRUE,1.124,6,0.576,15,1.162,0.00071,NA,"Spelled both with one l and with 2 ls, the Modelling one is legit and has data and is the one ERS published in"
+241,journal of disability policy studies,NA,TRUE,NA,NA,0.409,22,1.191,0.00071,NA,Correct
+111,journal of environmental management,Tier I,TRUE,NA,NA,1.141,123,4.01,0.03619,NA,Correct
+126,journal of food protection,Tier I,TRUE,NA,NA,0.759,115,1.417,0.00965,NA,Correct
+89,journal of income distribution,Tier III,TRUE,1.066,5,0.105,8,NA,NA,1,Correct
+77,journal of international food and agribusiness marketing,Tier III,TRUE,NA,NA,0.233,17,NA,NA,NA,Correct
+174,journal of natural resources policy research,Tier III,TRUE,NA,NA,0.199,4,NA,NA,NA,Correct
+252,journal of the association of environmental and resource economists,NA,TRUE,3.976,12,NA,NA,NA,NA,1,Does seem to be ECON
+91,journal of wine economics,Tier III,TRUE,0.662,6,NA,NA,NA,NA,NA,Correct
+206,nutrition today,Tier III,TRUE,NA,NA,0.165,13,NA,NA,NA,Correct
+262,public finance review,NA,TRUE,2.551,12,0.627,24,NA,NA,1,Correct
+10,regional science and urban economics,Tier I,TRUE,5.367,26,1.017,59,1.336,0.00522,1,Correct
+44,review of agricultural economics,Tier II,TRUE,NA,NA,NA,NA,NA,NA,1,This is a dicontinued journal and was replaced by AEPP. I would suggest we use the old metrics and keep this as Tier II for historical purposes.
+274,water resources research,NA,TRUE,NA,NA,2.383,158,4.397,0.05803,NA,Correct

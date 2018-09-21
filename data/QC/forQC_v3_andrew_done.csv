@@ -1,0 +1,35 @@
+,journal,oldtier,ERS,repec_impact,repec_h,sjr,sh,tr_impact,tr_ef,econ_flag,note
+2,american economic review,Tier I,TRUE,22.608,100,10.49,223,4.026,0.13008,1,NA
+12,american journal of agricultural economics,Tier I,TRUE,5.359,28,1.428,84,1.829,0.00655,1,NA
+107,american journal of clinical nutrition,Tier I,TRUE,NA,NA,3.664,283,6.926,0.06065,0,NA
+148,american journal of health promotion,Tier II,TRUE,NA,NA,0.778,78,2.586,0.00409,0,NA
+213,american journal of law and medicine,NA,TRUE,NA,NA,0.341,24,0.732,0.00048,0,NA
+119,biomass and bioenergy,Tier I,TRUE,NA,NA,1.188,138,3.219,0.02793,0,NA
+93,chinese economy,Tier III,TRUE,0.58,4,0.255,10,NA,NA,1,NA
+80,eastern economic journal,Tier III,TRUE,0.918,9,0.18,14,NA,NA,1,NA
+72,economic and political weekly,Tier III,TRUE,NA,NA,0.295,33,NA,NA,1,NA
+187,energies,Tier III,TRUE,0.384,13,0.691,48,2.262,0.01363,0,NA
+85,environmental economics,Tier III,TRUE,NA,NA,NA,NA,NA,NA,NA,can’t find any journal with this title
+142,foodborne pathogens and disease,Tier II,TRUE,NA,NA,1.043,51,2.12,0.00748,0,NA
+228,global change biology,NA,TRUE,NA,NA,4.768,190,8.502,0.07559,0,NA
+170,international business research,Tier III,TRUE,0.009,1,NA,NA,NA,NA,1,NA
+231,international food and agriculture review,NA,TRUE,NA,NA,NA,NA,NA,NA,NA,likely same as international food and agribusiness management review
+173,journal of developing areas,Tier III,TRUE,0.458,8,NA,NA,NA,NA,1,NA
+18,journal of economic entomology,Tier I,TRUE,NA,NA,0.901,83,1.824,0.00968,0,NA
+245,journal of environmental psychology,NA,TRUE,NA,NA,1.805,97,3.494,0.00545,0,NA
+98,journal of international economic agreements,Tier III,FALSE,NA,NA,NA,NA,NA,NA,NA,can’t find this journal
+120,journal of marriage and family,Tier I,TRUE,NA,NA,2.046,128,2.238,0.00792,0,NA
+156,journal of nutrition education and behavior,Tier III,TRUE,NA,NA,1.017,60,2.491,0.00446,0,NA
+250,journal of physics: conference series,NA,TRUE,NA,NA,0.24,52,NA,NA,0,NA
+52,journal of policy modeling,Tier II,TRUE,3.893,18,0.716,38,0.993,0.00174,1,NA
+195,journal of poverty,Tier III,TRUE,NA,NA,0.304,11,NA,NA,0,NA
+55,marine resource economics,Tier III,TRUE,0.604,4,0.866,35,1.911,0.00068,1,NA
+259,preventing chronic disease,NA,TRUE,NA,NA,1.256,55,1.802,0.01193,0,was “preventing chronic diseases”.  Lost “s” and found rankings
+167,professional geographer,Tier III,TRUE,NA,NA,0.774,58,1.276,0.00206,0,NA
+179,rural connections,Tier III,TRUE,NA,NA,NA,NA,NA,NA,NA,not peer reviewed
+105,science,Tier I,TRUE,NA,NA,13.535,978,37.205,1.15823,0,NA
+31,small business economics,Tier II,TRUE,5.619,24,2.15,92,2.421,0.0062,1,NA
+131,social forces,Tier I,TRUE,NA,NA,2.226,102,2.113,0.0073,0,NA
+145,social indicators research,Tier II,TRUE,NA,NA,0.914,76,1.743,0.01033,0,NA
+51,southern economic journal,Tier II,TRUE,3.328,17,0.499,45,0.584,0.00247,1,NA
+268,stata conferences and users group meetings,NA,TRUE,NA,NA,NA,NA,NA,NA,NA,not the stata journal

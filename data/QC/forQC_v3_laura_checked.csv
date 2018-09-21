@@ -1,0 +1,37 @@
+,journal,oldtier,ERS,repec_impact,repec_h,sjr,sh,tr_impact,tr_ef,econ_flag,note,changed,Notes
+216,annals of regional science,NA,TRUE,2.905,18,0.569,47,0.694,0.00202,NA,NA,0,
+217,annual review of resource economics,NA,TRUE,5.787,16,1.522,17,1.583,0.00155,1,NA,0,
+218,applied economics and finance,NA,TRUE,0.116,3,NA,NA,NA,NA,NA,NA,0,"This journal is not listed as ""potential predatory"" but the publisher (RedFame Publishing) is listed."
+42,applied economics letters,Tier II,TRUE,1.288,18,0.354,38,0.478,0.00367,1,NA,0,
+95,asian economic journal,Tier III,TRUE,1.841,8,0.242,23,0.256,0.00026,NA,NA,0,
+219,bioenergy research,NA,TRUE,NA,NA,0.943,39,2.487,0.0058,NA,NA,0,
+185,british food journal,Tier III,TRUE,NA,NA,0.466,46,1.206,0.00206,NA,NA,0,
+47,canadian journal of agricultural economics,Tier II,TRUE,2.194,NA,0.544,28,1.052,0.00075,1,NA,1,"RePEC title is ""Canadian Journal of Agricultural Economics/Revue canadienne d'agroeconomie, Canadian Agricultural Economics Society/Societe canadienne d'agroeconomie"", TR title is ""CANADIAN JOURNAL OF AGRICULTURAL ECONOMICS-REVUE CANADIENNE D AGROECONOMIE"""
+223,concurrences: competition law review,NA,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,0,"This looks to be from a very reputable group, but I could not verify a peer review process and it seems to be more of an outreach outlet."
+41,empirical economics,Tier II,TRUE,3.503,25,0.609,42,0.645,0.00399,1,NA,0,
+154,environmental management,Tier II,TRUE,NA,NA,0.794,91,1.878,0.0084,NA,NA,0,
+1,food policy,Tier I,TRUE,4.35,23,1.681,72,3.086,0.00803,1,NA,0,
+110,gastroenterology,Tier I,TRUE,NA,NA,6.527,345,18.392,0.12423,NA,NA,0,
+20,health economics,Tier I,TRUE,3.848,24,1.522,91,2.301,0.01079,NA,"There is more than one journal with this title, and they are ranked differently.  Find out which one ERS published in",0,This is the correct data for Health Economics. Note this journal has 2 identical entries in the TR worksheet.
+21,health economics,Tier I,TRUE,3.848,8,1.522,91,2.301,0.01079,NA,"There is more than one journal with this title, and they are ranked differently.  Find out which one ERS published in",,"The RePec H index appears to be for ""Health Economics, Policy and Law, Cambridge University Press"" , so this entry can be deleted."
+22,health economics,Tier I,TRUE,1.172,24,1.522,91,2.301,0.01079,NA,"There is more than one journal with this title, and they are ranked differently.  Find out which one ERS published in",,"The RePec impact factor appears to be for ""Health Economics, Policy and Law, Cambridge University Press"", so this entry can be deleted."
+23,health economics,Tier I,TRUE,1.172,8,1.522,91,2.301,0.01079,NA,"There is more than one journal with this title, and they are ranked differently.  Find out which one ERS published in",,"Both RePec metrics appear to be for ""Health Economics, Policy and Law, Cambridge University Press"" , so this entry can be deleted."
+152,industrial relations,Tier II,TRUE,1.93,10,0.879,46,1.647,0.00234,NA,NA,0,
+171,international journal of risk assessment and management,Tier III,TRUE,NA,NA,0.147,18,NA,NA,NA,NA,0,
+235,international productivity monitor,NA,TRUE,1.352,6,NA,NA,NA,NA,NA,NA,0,"I could not verify that there is a peer-review process at this publication, and it seems to be more of an outreach outlet.  From the website: ""The articles are largely nontechnical in nature and understandable to a wide audience of productivity researchers and analysts as well as the general public. The publication is distributed electronically to anyone interested in productivity issues on a complimentary basis. While most articles are invited, submissions will be considered."""
+236,japan and the world economy,NA,TRUE,2.961,13,0.419,28,0.489,0.00056,1,NA,0,
+166,journal of agricultural and food industrial organization,Tier III,TRUE,1.746,7,0.223,17,NA,NA,NA,NA,0,
+64,journal of consumer policy,Tier III,TRUE,1.175,8,0.619,33,NA,NA,1,NA,0,
+88,journal of economic and social measurement,Tier III,TRUE,6.5,3,0.393,19,NA,NA,NA,NA,0,
+191,journal of extension,Tier III,TRUE,NA,NA,0.216,25,NA,NA,NA,NA,0,
+129,journal of food distribution research,Tier III,TRUE,0.248,4,NA,NA,NA,NA,NA,NA,0,
+155,journal of food products marketing,Tier III,TRUE,NA,NA,0.327,18,NA,NA,NA,NA,0,
+143,journal of hunger and environmental nutrition,Tier II,TRUE,NA,NA,0.301,18,NA,NA,NA,NA,0,
+249,journal of nutrition in gerontology and geriatrics,NA,TRUE,NA,NA,0.443,13,NA,NA,NA,NA,0,
+133,journal of the american water resources association,Tier I,TRUE,NA,NA,0.77,83,1.717,0.00464,NA,NA,0,
+136,land use policy,Tier I,TRUE,NA,NA,1.376,77,3.089,0.01162,NA,NA,0,
+112,maternal and child health journal,Tier I,TRUE,NA,NA,1.208,65,1.788,0.01381,NA,NA,0,
+256,physiological behavior,NA,TRUE,NA,NA,1.05,132,2.341,0.02157,NA,NA,1,Correct journal name is Physiology and Behavior
+199,procedia food science,Tier III,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,0,A legitimate Elsevier journal; discontinued in 2017.
+106,public health nutrition,Tier I,TRUE,NA,NA,1.03,111,2.326,0.01893,NA,NA,0,
+157,renewable agriculture and food systems,Tier III,TRUE,NA,NA,0.595,38,1.333,0.00129,NA,NA,0,

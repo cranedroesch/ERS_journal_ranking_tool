@@ -1,0 +1,168 @@
+---
+title: "ERS Journal Ranking Tool Update -- Methods"
+author: "Andrew Crane-Droesch"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+laptop <- grepl("/home/andrew", getwd())
+desktop <- grepl(":", getwd())
+if(laptop){
+  path <- "/home/andrew/Dropbox/USDA/Admin/journal_ranking_tool/data"
+}
+library(dplyr)
+library(Matrix)
+```
+
+## Overview
+
+This document details the methods used for creating the new ERS journal ranks.  It first describes methods for combining multiple journal ranking indices into a single index, and then describes how we developed tiers based on the index.  
+
+We combine six indices from three ranking organizations:  
+
+*   REPEC Impact factor
+*   REPEC H-index
+*   Scimago journal ranking
+*   Scimago H-index
+*   Thomson-Reuters impact factor
+*   Thomson-Reuters eigenfactor
+
+RePEc provides an impact factor metric and an h-index. Scimago provides a journal rank indicator and an h-index. Thomson Reuters provides an impact factor and an eigenfactor score. Impact factors are a measure based on the number of article citations. H-indexes are a measure of how many articles within a given journal are widely cited. The two are analogous to a mean and variance measure; impact factors providing a comparable point-estimate impact metric for a journal and the h-index providing the distribution of impactful articles within a journal. Scimago's journal rank indicator seeks to account for the prestige of citing journals. Thomson Reuters' eigenfactor score also seeks to account for the ranking of the citing journals, with citations from more highly ranked journals given greater weight.
+
+Relatively few of the journals in which ERS has published are ranked in all of these indices, and none of these indices consistently ranks all journals in which ERS has published.  This is part of the motivation for combining the rankings into a single index.  Another motivation is to correct any bias stemming from missingness in the rankings: probability of absence of a measurement in one index is not uncorrelated with rankings in another index.  
+
+As such, combining indices into a single score -- using a method that accounts for non-random missingness -- aims to simplify journal rankings for ERS's internal purposes, while rendering disparate journals more comparable.  Additionally, the single score takes on a continuous distribution, which contains more information than scores upon which the previous journal ranking tool was based.  It is hoped that this improves the information environment in which decisions about ERS publication outlets are taken.
+
+Tiers can be created by specifying break points in the score.  We specify those break points as the terciles of the distribution of scores in peer-reviewed, rated journals in which ERS has published.  Tiers and tier break points are computed separately for economics journals and non-economics journals, similarly to the previous iteration of the tool.
+
+At a high level, we create the score by first predicting the "latent" values of the missing indices, and then computing the principal components score of the resultant "filled-in" data.  The score is taken as the first principal component of the resultant dataset.  We go into further detail below.
+
+## Methods
+
+### Input data
+
+The raw input data (journals in which ERS has published in) looks like this:
+
+````{r imp, echo = FALSE}
+dat <- read.csv(paste0(path, "/journals_ranked_and_tiered.csv"))
+
+
+dat <- dat[with(dat, order(pc_score, decreasing = T)),]
+adat <- dat[dat$ERS == 1, 5:10]
+adat[adat == 0] <- NA
+adat <- scale(log(adat))
+adat[,c("repec_impact", "repec_h", "sjr", "sh", "tr_impact", "tr_ef")] %>% 
+   Matrix %>% image(abs = FALSE, aspect=2, lwd = 0)
+
+````
+
+From left to right, the columns represent the REPEC impact factor, the REPEC H-index, the Scimago journal rank, the Scimago H-index, the Thomson-Reuters impact factor and the Thomson-Reuters Eigenfactor.  The colors represent the logged and normalized index values.  Red values are higher values of the indices, which indicate better "quality," according to the metric.  White values indicate missingness.
+
+From this plot, it is clear that 
+
+1.  Index values are correlated across metrics.  Rarely do we see red in one metric and blue in another.
+2.  If a journal is missing in Thompson-Reuters (the rightmost indices), it is unlikely that it is highly ranked in the other indices.
+3.  Many high-quality non-economics journals are not ranked in REPEC (the leftmost indices).
+
+### Imputation
+
+We use a form of multivariate imputation by chained equations (MICE) (Rubin 1987, White et al. 2011) to fill in the missing values of indices.  The MICE algorithm is fairly simple:
+
+1.  For one of several copies of a dataset, randomly fill in missing values from the observed distribution of values of the same variable. In other words, each missing value from REPEC's impact factor is filled in initially by sampling from the observed values of the REPEC impact factor.
+2.  For each variable $i$:
+  + Fit a model $v_i^{obs} = f(v_{-i}^{imp})$, where $obs$ indicates only observed values, and $imp$ indicated both observed and imputed values
+  + Update predictions of missing values $v_i^{miss} \leftarrow \hat{f}(v_{-i}^{imp})$
+  + Repeat these steps several times, looping through each variable, until updates approximately converge
+3.  Because of different initial conditions, results of steps 1 and 2 performed on different datasets will differ slightly.  Average them to form a single consensus prediction.
+
+The model that we use for $f()$ is a random forest (Breiman 2001).  Random forests were chosen because they offer good predictive skill with minimal assumptions about the distribution or other features of the data.  In addition to $v_{-i}^{imp}$, we include a matrix of dummy variables in the random forest, of equal dimension to $v_{-i}^{imp}$, equaling 1 where an index value is observed, and 0 otherwise.  In this way we make our predictions conditional on the missingness or presence of journal rankings.
+
+This algorithm is run on the full dataset of journals ranked by the three organizations from which we have data.  This comprises over 30,000 journals in disparate fields.
+
+The result of the algorithm, applied only to journals within which ERS has published, is below:
+
+````{r filled, echo = FALSE}
+dat <- read.csv(paste0(path, "/journals_ranked_and_tiered.csv"))
+impdat <- read.csv(paste0(path, "/imputed_data.csv"))
+
+impdat <- impdat[with(dat, order(pc_score, decreasing = T)),]
+adat <- impdat[dat$ERS == 1, 3:8]
+adat[adat == 0] <- NA
+adat <- scale(adat)
+adat[,c("repec_impact", "repec_h", "sjr", "sh", "tr_impact", "tr_ef")] %>% 
+  Matrix %>% image(abs = FALSE, aspect=2, lwd = 0)
+
+````
+
+
+### Principal Components Analysis
+
+We perform PCA on the filled-in dataset.  The variances of the components are summarized below:
+
+
+````{r pca, echo = FALSE}
+impdat <- read.csv(paste0(path, "/imputed_data.csv"))
+
+impdat <- impdat[, 3:8]
+
+pc <- prcomp(impdat, scale. = T, center = T)
+summary(pc)
+
+````
+
+The first component accounts for 88% of the variance of the data, and the second only 6%.  This first component is well-correlated with individual index scores, where they are observed:
+
+````{r scatter, echo = FALSE}
+dat <- read.csv(paste0(path, "/journals_ranked_and_tiered.csv"))
+
+dat <- log(dat[, 5:10])*-1
+par(mfrow = c(2,3))
+for (i in 1:6){
+  plot(dat[,i], pc$x[,1], main = colnames(dat)[i], xlab = "log(Index)", ylab = "PC score")
+  # abline(lm(pc$x[,1]~impdat[,i]), lty = 2, col = 'red')
+}
+
+````
+
+No clear relationship is apparent with the second PC:
+
+````{r scatter2, echo = FALSE}
+
+par(mfrow = c(2,3))
+for (i in 1:6){
+  plot(dat[,i], pc$x[,2], main = colnames(dat)[i], xlab = "log(Index)", ylab = "PC score")
+  # abline(lm(pc$x[,2]~impdat[,i]), lty = 2, col = 'red')
+}
+
+````
+
+### Tiering
+
+Tiers can be created by drawing lines through the distribution of the PC score.  We do so at the terciles of the distribution of the PC score, for journals in which ERS has published.  We do so separately for economics journals, for consistency with the previous journal ranking tool.  The distribution of scores for ERS's past journals, and the cutoff points, are plotted below:
+
+````{r ecdf, echo = FALSE}
+dat <- read.csv(paste0(path, "/journals_ranked_and_tiered.csv"))
+
+terciles_non <- dat$pc_score[dat$ERS == TRUE & !is.na(dat$econ_flag) & dat$econ_flag == 0] %>% quantile(probs = c(.33, .66)) %>% rev
+terciles_econ <- dat$pc_score[dat$ERS == TRUE & !is.na(dat$econ_flag) & dat$econ_flag == 1] %>% quantile(probs = c(.33, .66)) %>% rev
+
+par(mfrow = c(1, 2))
+plot(ecdf(dat$pc_score[dat$ERS==1 & dat$econ_flag == 1]), main = "Economics Journals", xlab = "PC score")
+abline(v = terciles_econ, lty = 2, col = "red")
+plot(ecdf(dat$pc_score[dat$ERS==1 & dat$econ_flag == 0]), main = "Non-Economics Journals", xlab = "PC score")
+abline(v = terciles_non, lty = 2, col = "red")
+
+````
+
+The results of the journal ranking and tiering are in the spreadsheet ERS_journal_ranks_2018.xlsx.
+
+## References
+
+Breiman, Leo. "Random forests." *Machine learning* 45.1 (2001): 5-32.
+
+Rubin, Donald B. *Multiple imputation for nonresponse in surveys*. Vol. 81. John Wiley & Sons, 2004.
+
+White, Ian R., Patrick Royston, and Angela M. Wood. "Multiple imputation using chained equations: issues and guidance for practice." *Statistics in medicine* 30.4 (2011): 377-399.

@@ -1,0 +1,34 @@
+,journal,oldtier,ERS,repec_impact,repec_h,sjr,sh,tr_impact,tr_ef,econ_flag,note
+71,african journal of agricultural and resource economics,Tier III,TRUE,1.504,8,NA,NA,NA,NA,NA,NA
+209,agrekon,NA,TRUE,0.653,3,0.228,17,0.224,1.00E-04,1,NA
+108,annals of internal medicine,Tier I,TRUE,NA,NA,6.492,339,17.202,0.09996,NA,NA
+220,british medical journal,NA,TRUE,NA,NA,2.687,358,20.785,0.15994,NA,"Found in TR under ""BMJ-British Medical Journal"""
+32,china economic review,Tier II,TRUE,3.822,20,0.837,52,1.366,0.00375,1,NA
+101,economics of innovation and new technology,Tier III,TRUE,3.433,16,0.62,22,NA,NA,1,NA
+125,energy,Tier I,TRUE,2.071,32,1.999,134,4.52,0.06612,NA,NA
+122,energy journal,Tier I,TRUE,6.634,26,1.537,57,2.429,0.00354,1,NA
+117,energy policy,Tier I,TRUE,6.022,52,2.197,146,4.14,0.05308,NA,NA
+201,food technology,Tier III,TRUE,NA,NA,0.125,52,0.233,0.00024,NA,NA
+102,global food security,Tier III,TRUE,NA,NA,1.742,18,3.527,0.00225,NA,"Found in TR under ""Global Food Security-Agriculture Policy Economics and Environment"""
+202,housing and society,Tier III,TRUE,NA,NA,0.102,1,NA,NA,NA,NA
+38,housing studies,Tier II,TRUE,0.221,4,1.336,54,1.513,0.00271,NA,NA
+46,journal of agricultural and resource economics,Tier II,TRUE,2.459,12,0.688,38,1,9.00E-04,1,NA
+237,journal of applied poultry research,NA,TRUE,NA,NA,0.566,47,0.887,0.00178,NA,NA
+238,journal of behavioral and experimental economics,NA,TRUE,2.391,15,0.517,46,0.809,0.00098,1,"Found in REPEC under ""Journal of Behavioral and Experimental Economics (Formerly The Journal of Socio-Economics)"""
+239,journal of business and economics research,NA,TRUE,NA,NA,NA,NA,NA,NA,NA,"Closest match found is ""Business and Economics Research Journal, Uludag University, Faculty of Economics and Administrative Science"" in REPEC"". Not found in Beall's list or Stop Predatory Journals list, but it may be predatory; see https://publons.com/journal/34990/journal-of-business-economics-research-jber. "
+127,journal of development effectiveness,Tier I,TRUE,1.583,10,0.48,12,0.484,0.00101,NA,NA
+40,journal of development studies,Tier II,TRUE,3.247,23,0.914,66,1.134,0.0049,NA,NA
+7,journal of economic geography,Tier I,TRUE,6.401,24,3.473,77,3.648,0.0061,1,NA
+242,journal of economic policy reform,NA,TRUE,1.393,8,0.43,12,0.925,5.00E-04,1,NA
+175,journal of product and brand management,Tier III,TRUE,NA,NA,0.659,40,NA,NA,NA,NA
+100,journal of social sciences,Tier III,TRUE,0.025,2,NA,NA,NA,NA,NA,Found in REPEC but not other metrics
+141,journal of soil and water conservation,Tier II,TRUE,NA,NA,NA,NA,2.229,0.00277,NA,NA
+124,journal of technology transfer,Tier I,TRUE,2.414,15,1.254,57,2.631,0.00207,NA,NA
+16,journal of urban economics,Tier I,TRUE,11.03,33,2.56,83,1.904,0.00657,1,NA
+135,preventive veterinary medicine,Tier I,TRUE,NA,NA,1.185,76,1.987,0.00914,NA,NA
+260,professional animal scientist,NA,TRUE,NA,NA,0.348,23,NA,NA,NA,NA
+14,review of economics and statistics,Tier I,TRUE,22.36,62,6.306,127,2.926,0.03248,1,NA
+269,stata journal,NA,TRUE,4.637,21,1.283,52,1.092,0.00539,NA,NA
+114,trends in endocrinology and metabolism,Tier I,TRUE,NA,NA,5.006,135,10.893,0.01853,NA,NA
+200,trends in organized crime,Tier III,TRUE,NA,NA,0.412,17,NA,NA,NA,NA
+273,water resources and economics,NA,TRUE,NA,NA,0.705,8,NA,NA,NA,NA
